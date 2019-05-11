@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// Route::get('/users/{id}/{name}',function($id,$name){
+//     return "this is ".$name." with id ".$id;  //url: 127.0.0.1:8000/users/4/amitoj
+// });
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/','PagesController@index');
+Route::get('/about','PagesController@about');
+Route::get('/services','PagesController@services');
+
