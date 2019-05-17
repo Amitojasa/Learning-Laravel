@@ -4,7 +4,7 @@
     <br><br>
     <h1>{{$post->title}}</h1>
     <div>
-        {{$post->body}}
+        {!!$post->body!!} {{-- {!! Text!!} to parse html --}}
     </div>
     <hr>
     <small>Written on {{$post->created_at}}</small>
