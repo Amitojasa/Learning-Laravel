@@ -7,7 +7,7 @@
         {!!$post->body!!} {{-- {!! Text!!} to parse html --}}
     </div>
     <hr>
-    <small>Written on {{$post->created_at}}</small>
+    <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
     <hr>
     <a href="/posts/{{$post->id}}/edit" class="btn btn-outline-dark">Edit</a>
     {!! Form::open(['action' => ['PostsController@update',$post->id],'method'=>'POST','class'=>'float-right']) !!}
